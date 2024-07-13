@@ -1,6 +1,6 @@
 resource "aws_security_group" "sg_ssh" {
   name                        = "sg_ssh"
-  description                 = var.sg_ssh_description[terraform.workspace]
+  description                 = var.sg_ssh_description
   vpc_id                      = var.vpc_id
 
   ingress {
@@ -26,7 +26,7 @@ resource "aws_security_group" "sg_ssh" {
 
 resource "aws_security_group" "sg_web" {
   name                        = "sg_web"
-  description                 = var.sg_ssh_description
+  description                 = var.sg_web_description
   vpc_id                      = var.vpc_id
 
   ingress {
