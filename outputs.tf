@@ -3,5 +3,5 @@ output "sg_ssh_id" {
 }
 
 output "sg_ssh_bastion_id" {
-  value           = aws_security_group.sg_ssh_bastion.id
+  value           = aws_security_group.sg_web.id
 }
