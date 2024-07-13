@@ -12,4 +12,13 @@ module "terraform_sg" {
   }
 
 }
+
+#SG
+output "sg_ssh" {
+  value = module.terraform_sg.sg_ssh_o
+}
+
+output "sg_web" {
+  value = module.terraform_sg.sg_web_o
+}
 ```
