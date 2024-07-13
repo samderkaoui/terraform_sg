@@ -18,11 +18,13 @@ resource "aws_security_group" "sg_ssh" {
     cidr_blocks               = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name                      = "sg_ssh"
-  }
+  tags = merge(
+    var.tags,
+    {
+      Name = "sg_ssh"
+    }
+  )
 }
-
 
 resource "aws_security_group" "sg_web" {
   name                        = "sg_web"
@@ -52,7 +54,10 @@ resource "aws_security_group" "sg_web" {
     cidr_blocks               = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name                      = "sg_web"
-  }
+  tags = merge(
+    var.tags,
+    {
+      Name = "sg_web"
+    }
+  )
 }
