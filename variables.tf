@@ -14,3 +14,9 @@ variable "sg_ssh_description" {
   type        = string
   default     = "Ouvre port 22"
 }
+
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  type        = map(string)
+  default     = {}
+}
