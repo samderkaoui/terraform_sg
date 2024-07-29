@@ -1,5 +1,5 @@
 output "sg_web_description" {
-  value = aws_security_group.sg_web_description.id
+  value = aws_security_group.sg_web.id
 }
 
 output "sg_externe_ssh" {
