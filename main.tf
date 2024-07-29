@@ -1,5 +1,5 @@
-resource "aws_security_group" "sg_ssh" {
-  name                        = "sg_ssh"
+resource "aws_security_group" "sg_externe_ssh" {
+  name                        = "sg_externe_ssh"
   description                 = var.sg_ssh_description
   vpc_id                      = var.vpc_id
 
@@ -21,7 +21,7 @@ resource "aws_security_group" "sg_ssh" {
   tags = merge(
     var.tags,
     {
-      Name = "sg_ssh"
+      Name = "sg_externe_ssh"
     }
   )
 }
