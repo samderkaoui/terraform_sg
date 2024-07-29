@@ -9,7 +9,7 @@ variable "sg_web_description" {
   default     = "Ouvre port 80 et 443"
 }
 
-variable "sg_ssh_description" {
+variable "sg_externe_ssh" {
   description = "SG SSH"
   type        = string
   default     = "Ouvre port 22"
