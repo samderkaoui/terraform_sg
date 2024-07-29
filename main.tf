@@ -149,10 +149,23 @@ resource "aws_security_group" "sg_openall_ports" {
   vpc_id      = var.vpc_id
 
   ingress {
-    description = "SSH in"
-    from_port   = 22
-    to_port     = 22
+    description = "All in tcp"
+    from_port   = 1
+    to_port     = 65535
     protocol    = "tcp"
+    cidr_blocks = [
+      "10.0.1.0/24",
+      "10.0.2.0/24",
+      "10.0.101.0/24",
+      "10.0.102.0/24"
+    ]
+  }
+
+  ingress {
+    description = "All in udp"
+    from_port   = 1
+    to_port     = 65535
+    protocol    = "udp"
     cidr_blocks = [
       "10.0.1.0/24",
       "10.0.2.0/24",
