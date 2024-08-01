@@ -176,8 +176,8 @@ resource "aws_security_group" "sg_openall_ports" {
 
   ingress {
     description = "All ICMP"
-    from_port   = 1
-    to_port     = 65535
+    from_port   = -1
+    to_port     = -1
     protocol    = "icmp"
     cidr_blocks = [
       "10.0.1.0/24",
